@@ -1,20 +1,30 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { StatusBar } from "expo-status-bar";
+import { StyleSheet, Text, View, SafeAreaView } from "react-native";
+import hoopersdata from "./hoopersdata.js";
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
+    <SafeAreaView style={styles.container}>
+      <Text style={styles.text}>Alley-oop!</Text>
+      <Text style={styles.text2}>the app to find your dream teammates</Text>
       <StatusBar style="auto" />
-    </View>
+    </SafeAreaView>
   );
 }
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
+    backgroundColor: "#232931",
+    alignItems: "center",
+    justifyContent: "center",
+    color: "#EEEEEE",
+    border: "#393E46",
+  },
+  text: {
+    color: "#4ECCA3",
+  },
+  text2: {
+    color: "#EEEEEE",
   },
 });
