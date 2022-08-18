@@ -1,6 +1,5 @@
 import React, { useContext } from "react";
 import { Text, View, Image, StyleSheet } from "react-native";
-import { YellowBox } from "react-native-web";
 
 function Hooper({ HooperData }) {
   return (
@@ -10,7 +9,7 @@ function Hooper({ HooperData }) {
         style={styles.hooperimage}
         source={require(`../images/${HooperData.picture}`)}
       />
-      <Text>{HooperData.location}</Text>
+      <Text style={styles.location}>{HooperData.location}</Text>
       <Text style={styles.quote}>{HooperData.quote}</Text>
     </View>
   );
@@ -25,6 +24,7 @@ const styles = StyleSheet.create({
     borderColor: "lightgray",
     borderRadius: 20,
     alignItems: "center",
+    marginVertical: 5,
   },
   hooperimage: {
     height: 300,
@@ -32,7 +32,16 @@ const styles = StyleSheet.create({
     resizeMode: "contain",
   },
   name: {
-    color: "yellow",
+    color: "#4ECCA3",
+    paddingBottom: 10,
+  },
+  location: {
+    backgroundColor: "#03C4A1",
+    borderRadius: 20,
+    color: "white",
+    marginTop: 5,
+    paddingHorizontal: 9,
+    paddingVertical: 2,
   },
   quote: {
     fontSize: 10,
