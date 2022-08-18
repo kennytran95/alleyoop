@@ -1,8 +1,9 @@
 let hoopers = [
   {
+    id: 1,
     name: "Kenny",
     location: "Garden Grove",
-    picture: "/assets/kenny.jpg",
+    picture: "kenny.jpg",
     quote: "im gonna cross u up so bad lol",
     stats: {
       shooting: 4,
@@ -15,9 +16,10 @@ let hoopers = [
     },
   },
   {
+    id: 2,
     name: "Timmy",
     location: "Garden Grove",
-    picture: "/assets/timmy.jpg",
+    picture: "tim.jpg",
     quote: "just gotta shoot better haha",
     stats: {
       shooting: 10,
@@ -30,10 +32,11 @@ let hoopers = [
     },
   },
   {
+    id: 3,
     name: "Kevin",
     location: "Garden Grove",
-    picture: "/assets/kenny.jpg",
-    quote: "im gonna cross u up so bad lol",
+    picture: "kevin.jpg",
+    quote: "WEIGHT ROOM",
     stats: {
       shooting: 10,
       passing: 7,
@@ -45,10 +48,11 @@ let hoopers = [
     },
   },
   {
+    id: 4,
     name: "George",
     location: "Garden Grove",
-    picture: "/assets/kenny.jpg",
-    quote: "im gonna cross u up so bad lol",
+    picture: "george.jpg",
+    quote: "the kid was trash talking so i had to shut him up",
     stats: {
       shooting: 10,
       passing: 10,
@@ -60,10 +64,11 @@ let hoopers = [
     },
   },
   {
+    id: 5,
     name: "Roger",
     location: "Garden Grove",
-    picture: "/assets/kenny.jpg",
-    quote: "im gonna cross u up so bad lol",
+    picture: "roger.jpg",
+    quote: "Ill look for you 😎",
     stats: {
       shooting: 8,
       passing: 10,
@@ -75,10 +80,11 @@ let hoopers = [
     },
   },
   {
+    id: 6,
     name: "Han",
     location: "Garden Grove",
-    picture: "/assets/kenny.jpg",
-    quote: "im gonna cross u up so bad lol",
+    picture: "han.jpg",
+    quote: "ILL SHOOT FOR BALL",
     stats: {
       shooting: 8,
       passing: 6,
@@ -90,10 +96,11 @@ let hoopers = [
     },
   },
   {
+    id: 7,
     name: "Hieu",
     location: "Garden Grove",
-    picture: "/assets/kenny.jpg",
-    quote: "im gonna cross u up so bad lol",
+    picture: "hieu.jpg",
+    quote: "if we really wanna win, ill play inside",
     stats: {
       shooting: 9,
       passing: 10,
@@ -105,10 +112,11 @@ let hoopers = [
     },
   },
   {
+    id: 8,
     name: "Steven",
-    location: "Garden Grove",
-    picture: "/assets/kenny.jpg",
-    quote: "im gonna cross u up so bad lol",
+    location: "San Diego",
+    picture: "steven.jpg",
+    quote: "gonna drive this ball and steal yo girl",
     stats: {
       shooting: 6,
       passing: 6,
@@ -120,9 +128,10 @@ let hoopers = [
     },
   },
   {
+    id: 9,
     name: "Hao",
     location: "Garden Grove",
-    picture: "/assets/kenny.jpg",
+    picture: "hao.jpg",
     quote: "3 but no d",
     stats: {
       shooting: 8,
@@ -135,9 +144,10 @@ let hoopers = [
     },
   },
   {
+    id: 10,
     name: "Courtney",
     location: "Huntington Beach",
-    picture: "/assets/courtney.jpg",
+    picture: "courtney.jpg",
     quote: "but when are we going to edc?",
     stats: {
       shooting: 10,
@@ -150,3 +160,5 @@ let hoopers = [
     },
   },
 ];
+
+export default hoopers;
