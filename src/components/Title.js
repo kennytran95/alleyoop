@@ -5,7 +5,7 @@ function Title() {
   return (
     <View style={styles.container}>
       <Text style={styles.text}>Alley-oop!</Text>
-      <Text style={styles.text2}>find your dream teammates</Text>
+      <Text style={styles.text2}>find your dream team</Text>
     </View>
   );
 }
