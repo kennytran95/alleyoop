@@ -5,7 +5,6 @@ import Swiper from "react-native-deck-swiper";
 
 function SwipePage() {
   const HoopersData = useContext(HooperContext);
-  console.log(`../images/${HoopersData[0].picture}`);
   return (
     <View style={styles.container}>
       <Swiper
