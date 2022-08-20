@@ -1,13 +1,16 @@
-import React, { useState, useEffect, useContext } from "react";
+import React, { useEffect } from "react";
 import { NavigationContainer } from "@react-navigation/native";
+import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import { StatusBar } from "expo-status-bar";
-import { StyleSheet, Text, View, SafeAreaView, Image } from "react-native";
+import { StyleSheet, SafeAreaView } from "react-native";
 import Title from "./src/components/Title.js";
-import SwipePage from "./src/components/SwipePage.js";
 import BottomNavBar from "./src/components/BottomNavBar.js";
 import hoopers from "./hoopersdata.js";
+import LoginScreen from "./src/components/LoginScreen.js";
+import SwipePage from "./src/components/SwipePage.js";
 
 export const HooperContext = React.createContext();
+const Stack = createNativeStackNavigator();
 
 export default function App() {
   useEffect(() => {
@@ -16,15 +19,21 @@ export default function App() {
 
   return (
     <NavigationContainer>
-      <HooperContext.Provider value={hoopers}>
-        <SafeAreaView style={styles.container}>
-          <Title />
-          {/* <SwipePage /> */}
-          <BottomNavBar />
-
-          <StatusBar style="auto" />
-        </SafeAreaView>
-      </HooperContext.Provider>
+      <Stack.Navigator>
+        {/* <HooperContext.Provider value={hoopers}> */}
+        <Stack.Screen
+          options={{ headerShown: false }}
+          name="Login"
+          component={LoginScreen}
+        />
+        <Stack.Screen name="Home" component={SwipePage} />
+        {/* <SafeAreaView style={styles.container}>
+            <Title />
+            <BottomNavBar />
+            <StatusBar style="auto" />
+          </SafeAreaView> */}
+        {/* </HooperContext.Provider> */}
+      </Stack.Navigator>
     </NavigationContainer>
   );
 }

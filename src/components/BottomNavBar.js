@@ -1,6 +1,8 @@
 import { createMaterialBottomTabNavigator } from "@react-navigation/material-bottom-tabs";
 import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
 import SwipePage from "./SwipePage.js";
+import Chats from "./Chats.js";
+import Profile from "./Profile.js";
 
 const Tab = createMaterialBottomTabNavigator();
 
@@ -12,35 +14,39 @@ function BottomNavBar() {
       barStyle={{ backgroundColor: "seagreen" }}
     >
       <Tab.Screen
-        name="Feed"
-        component={SwipePage}
-        options={{
-          tabBarLabel: "Home",
-          tabBarIcon: ({ color }) => (
-            <MaterialCommunityIcons name="home" color={color} size={26} />
-          ),
-        }}
-      />
-      {/* <Tab.Screen
-        name="Notifications"
-        component={Notifications}
-        options={{
-          tabBarLabel: 'Updates',
-          tabBarIcon: ({ color }) => (
-            <MaterialCommunityIcons name="bell" color={color} size={26} />
-          ),
-        }}
-      />
-      <Tab.Screen
         name="Profile"
         component={Profile}
         options={{
-          tabBarLabel: 'Profile',
+          tabBarLabel: "Profile",
           tabBarIcon: ({ color }) => (
             <MaterialCommunityIcons name="account" color={color} size={26} />
           ),
         }}
-      /> */}
+      />
+      <Tab.Screen
+        name="Feed"
+        component={SwipePage}
+        options={{
+          tabBarLabel: "Swipe",
+          tabBarIcon: ({ color }) => (
+            <MaterialCommunityIcons
+              name="cards-playing-outline"
+              color={color}
+              size={26}
+            />
+          ),
+        }}
+      />
+      <Tab.Screen
+        name="Messages"
+        component={Chats}
+        options={{
+          tabBarLabel: "Updates",
+          tabBarIcon: ({ color }) => (
+            <MaterialCommunityIcons name="chat" color={color} size={26} />
+          ),
+        }}
+      />
     </Tab.Navigator>
   );
 }
