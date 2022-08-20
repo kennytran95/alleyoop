@@ -1,10 +1,10 @@
 import React from "react";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import { StatusBar } from "expo-status-bar";
-import { StyleSheet, SafeAreaView } from "react-native";
-import Title from "./src/components/Title.js";
-import BottomNavBar from "./src/components/BottomNavBar.js";
-import hoopers from "./hoopersdata.js";
+import { StyleSheet, SafeAreaView, Text } from "react-native";
+import Title from "./Title.js";
+import BottomNavBar from "./BottomNavBar.js";
+import hoopers from "../../hoopersdata.js";
 
 export const HooperContext = React.createContext();
 

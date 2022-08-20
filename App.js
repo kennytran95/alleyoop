@@ -2,11 +2,12 @@ import React, { useEffect } from "react";
 import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import { StatusBar } from "expo-status-bar";
-import { StyleSheet, SafeAreaView } from "react-native";
+import { StyleSheet, SafeAreaView, Text } from "react-native";
 import Title from "./src/components/Title.js";
 import BottomNavBar from "./src/components/BottomNavBar.js";
 import hoopers from "./hoopersdata.js";
 import LoginScreen from "./src/components/LoginScreen.js";
+import HomeScreen from "./src/components/HomeScreen.js";
 import SwipePage from "./src/components/SwipePage.js";
 
 export const HooperContext = React.createContext();
@@ -18,38 +19,23 @@ export default function App() {
   }, []);
 
   return (
-    <NavigationContainer>
-      <Stack.Navigator>
-        {/* <HooperContext.Provider value={hoopers}> */}
-        <Stack.Screen
-          options={{ headerShown: false }}
-          name="Login"
-          component={LoginScreen}
-        />
-        <Stack.Screen name="Home" component={SwipePage} />
-        {/* <SafeAreaView style={styles.container}>
-            <Title />
-            <BottomNavBar />
-            <StatusBar style="auto" />
-          </SafeAreaView> */}
-        {/* </HooperContext.Provider> */}
-      </Stack.Navigator>
-    </NavigationContainer>
+    <HooperContext.Provider value={hoopers}>
+      <NavigationContainer>
+        <Stack.Navigator>
+          <Stack.Screen
+            options={{ headerShown: false }}
+            name="Login"
+            component={LoginScreen}
+          />
+          <Stack.Screen
+            name="Home"
+            component={HomeScreen}
+            options={{ headerShown: false }}
+          />
+        </Stack.Navigator>
+      </NavigationContainer>
+    </HooperContext.Provider>
   );
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: "#232931",
-    // alignItems: "center",
-    justifyContent: "center",
-    color: "#EEEEEE",
-    border: "#393E46",
-  },
-  hooperimage: {
-    height: 150,
-    width: 150,
-    resizeMode: "contain",
-  },
-});
+const styles = StyleSheet.create({});
