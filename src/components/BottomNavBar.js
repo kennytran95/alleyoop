@@ -9,9 +9,9 @@ const Tab = createMaterialBottomTabNavigator();
 function BottomNavBar() {
   return (
     <Tab.Navigator
-      initialRouteName="Feed"
-      activeColor="#e91e63"
-      barStyle={{ backgroundColor: "seagreen" }}
+      initialRouteName="Messages"
+      activeColor="#e8830c"
+      barStyle={{ backgroundColor: "transparent" }}
     >
       <Tab.Screen
         name="Profile"

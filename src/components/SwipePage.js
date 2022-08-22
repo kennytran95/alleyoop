@@ -35,13 +35,13 @@ function SwipePage() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#232931",
+    backgroundColor: "#181a1b",
     justifyContent: "center",
     alignItems: "center",
     overflow: "hidden",
   },
   card: {
-    backgroundColor: "#232931",
+    backgroundColor: "#1E212D",
     padding: "10px",
     minWidth: "300px",
     borderWidth: 1.8,
@@ -58,11 +58,13 @@ const styles = StyleSheet.create({
     overflow: "hidden",
   },
   name: {
-    color: "#4ECCA3",
+    color: "white",
     paddingBottom: 10,
+    fontSize: 35,
+    // textTransform: "uppercase",
   },
   location: {
-    backgroundColor: "#03C4A1",
+    backgroundColor: "#e8830c",
     borderRadius: 20,
     color: "white",
     marginTop: 50,
@@ -71,7 +73,7 @@ const styles = StyleSheet.create({
     paddingVertical: 2,
   },
   quote: {
-    fontSize: 10,
+    fontSize: 15,
     color: "lightgray",
     fontStyle: "italic",
   },

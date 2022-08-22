@@ -15,8 +15,7 @@ function HomeScreen() {
         <Title />
         <BottomNavBar />
         <StatusBar style="auto" />
-      </SafeAreaView>{" "}
-      */
+      </SafeAreaView>
     </HooperContext.Provider>
   );
 }
@@ -24,11 +23,11 @@ function HomeScreen() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#232931",
+    backgroundColor: "#181a1b",
+    borderWidth: 2,
     // alignItems: "center",
     justifyContent: "center",
     color: "#EEEEEE",
-    border: "#393E46",
   },
   hooperimage: {
     height: 150,

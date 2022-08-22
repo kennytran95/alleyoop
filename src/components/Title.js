@@ -13,7 +13,7 @@ function Title() {
 const styles = StyleSheet.create({
   container: {
     // flex: 1,
-    backgroundColor: "#393E46",
+    backgroundColor: "#181a1b",
     alignItems: "center",
     justifyContent: "center",
     width: "100%",
@@ -24,7 +24,7 @@ const styles = StyleSheet.create({
     marginBottom: 10,
   },
   text: {
-    color: "#4ECCA3",
+    color: "#e8830c",
     fontSize: 30,
     textTransform: "uppercase",
   },
